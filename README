@@ -1,3 +1,25 @@
+- About this Repo -
+
+This is a copy of the MComix 1.2.1 Code available at https://sourceforge.net/projects/mcomix/.
+It was modified so the Comicrack metadata will be recognized, and used. It is unfortunately 
+impossible to alter the metadata this way, you may use comictagger https://code.google.com/archive/p/comictagger/downloads.
+When scanning, certain metadata tags (not all available because there are too many, 
+create an issue if there is one missing you need). 
+The search function of the library now also searches these additional fields, so you may search for characters, tags, etc.
+Also, when you have bookmarks for your comics (for example different chapters, but also marks like Table of Contents), 
+they will be automatically shown as a bookmark when opening the book. 
+Lastly the additional metadata is shown in the details box in the library view.
+
+There is no performance difference, no additional dependencies and it takes about 5 KB more than the original installation.
+
+All of this has two trade-offs:
+1. This significantly modifies the database. You have to delete it (in linux: rm ~/.local/share/mcomix/library.db).
+2. The current loading of the bookmarks destroys all manual bookmarks taken. It is not possible to store new ones, 
+they get destroyed once a new book is loaded
+This process is not impossible to fix, but rather difficult. Please open an issue if you are interested in restoring the feature.
+
+
+
 - MComix README -
 
 === About =====================================================================
